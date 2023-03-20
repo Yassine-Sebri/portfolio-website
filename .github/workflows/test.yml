@@ -1,0 +1,32 @@
+name: test
+on:
+  push:
+    branches:
+      - dev/*
+
+jobs:
+  tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm install
+      - name: Run eslint
+        run: npm run lint
+
+  pr:
+    name: Create pull request
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create a pull request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "main"
+          pr_title: "Pulling ${{ github.ref_name }} into main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
