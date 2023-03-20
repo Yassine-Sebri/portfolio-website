@@ -17,13 +17,13 @@ jobs:
         run: npm install
       - name: Run eslint
         run: npm run lint
-
-  pr:
-    name: Create pull request
-    needs: tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          build: npm run build
+          start: npm run start
+          wait-on: http://localhost:3000
       - name: Create a pull request
         uses: repo-sync/pull-request@v2
         with:
