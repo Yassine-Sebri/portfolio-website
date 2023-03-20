@@ -2,7 +2,7 @@ describe("Navigation", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/");
   });
-  it("should navigate to the Projects page", () => {
+  it("Should navigate between different pages", () => {
     // Go to projects
     cy.get('a[href*="projects"]').eq(0).click();
     cy.url().should("include", "/projects");
