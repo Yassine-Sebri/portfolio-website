@@ -9,7 +9,8 @@ const userData = {
     {
       title: "Portfolio Website",
       link: "https://github.com/Yassine-Sebri/portfolio-website",
-      description: "Written in React and Next.js and Deployed with Vercel.",
+      description:
+        "Written in React and Next.js and uses github actions and Vercel for CI/CD.",
     },
     {
       title: "Mock Container",
@@ -27,12 +28,12 @@ const userData = {
       title: "Custom Bootloader",
       link: "https://github.com/Yassine-Sebri/Custom-Bootloader",
       description:
-        "A bootloader written in assembly to understand the startup process.",
+        "A bootloader written in assembly to understand the bootup process.",
     },
     {
       title: "Terminal Website",
       link: "https://github.com/Yassine-Sebri/Terminal-Website",
-      description: "A Terminal themed website written with React.",
+      description: "A Terminal themed website written in React.",
     },
   ],
   about: {
