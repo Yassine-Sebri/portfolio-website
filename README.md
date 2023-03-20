@@ -2,4 +2,15 @@
 
 A simple and minimalistic website written in React and Next.js that uses github actions for some CI.
 
-Currently, Only ESlint is used for testing.
+## Technologies used
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Next.js
+- Git
+- GitHub actions
+- ESLint
+- Cypress
+- Vercel
