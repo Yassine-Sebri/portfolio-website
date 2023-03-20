@@ -29,4 +29,5 @@ jobs:
         with:
           destination_branch: "main"
           pr_title: "Pulling ${{ github.ref_name }} into main"
+          pr_label: "auto-pr"
           github_token: ${{ secrets.GITHUB_TOKEN }}
