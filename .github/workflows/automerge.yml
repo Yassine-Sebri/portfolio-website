@@ -2,11 +2,14 @@ name: automerge
 on:
   workflow_run:
     workflows: [test]
+    branches:
+      - dev/*
     types:
       - completed
 jobs:
   automerge:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - id: automerge
         name: automerge
