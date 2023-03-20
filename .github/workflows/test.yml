@@ -29,9 +29,12 @@ jobs:
         with:
           destination_branch: "main"
           pr_title: "Pulling ${{ github.ref_name }} into main"
+          pr_label: "auto-pr"
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Merge the pull request
         uses: "pascalgn/automerge-action@v0.15.6"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: ""
+          MERGE_LABELS: "auto-pr"
+          MERGE_DELETE_BRANCH: "true"
+          MERGE_METHOD: "squash"
