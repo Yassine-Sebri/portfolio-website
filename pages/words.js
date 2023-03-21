@@ -10,7 +10,6 @@ import {
 import { initFirebase } from "@/firebase/firebaseApp";
 
 import ContainerBlock from "../components/ContainerBlock";
-import WordsForm from "../components/WordsForm";
 import Comments from "../components/Comments";
 
 const app = initFirebase();
