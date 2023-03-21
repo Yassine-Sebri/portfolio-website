@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@constants/*": ["constants/*"]
+      "@constants/*": ["constants/*"],
+      "@firebase/*": ["firebase/*"]
     }
   }
 }
