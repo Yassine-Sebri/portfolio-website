@@ -164,9 +164,12 @@ function WordsEntry({ entry, user }) {
               <span className="text-gray-200 dark:text-gray-800">/</span>
               <button
                 onClick={deleteEntry}
-                className="text-sm text-red-600 dark:text-red-400"
+                className="ml-2 text-sm text-red-600 dark:text-red-400"
               >
-                <MdDeleteForever className="text-red-500 h-4 w-4" />
+                <MdDeleteForever
+                  className="text-red-500 h-4 w-4"
+                  style={{ marginBottom: "-3px" }}
+                />
               </button>
             </span>
           )}
