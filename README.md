@@ -15,4 +15,3 @@ A simple and minimalistic website written in React and Next.js that uses github 
 - Gitleaks
 - ESLint
 - Cypress
-- Vercel
