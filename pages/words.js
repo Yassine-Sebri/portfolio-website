@@ -1,19 +1,12 @@
 import React from "react";
 
-import {
-  getFirestore,
-  collection,
-  query,
-  orderBy,
-  getDocs,
-} from "firebase/firestore";
-import { app } from "@/firebase/firebaseApp";
+import { collection, query, orderBy, getDocs } from "firebase/firestore";
+import { database } from "@/firebase/firebaseApp";
 
 import ContainerBlock from "../components/ContainerBlock";
 import Comments from "../components/Comments";
 
 export const getServerSideProps = async () => {
-  const database = getFirestore(app);
   const dbInstance = collection(database, "comments");
 
   const q = query(dbInstance, orderBy("updatedAt", "desc"));

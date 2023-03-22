@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import {
-  getAuth,
   signInWithPopup,
   GoogleAuthProvider,
   setPersistence,
@@ -10,7 +9,6 @@ import {
 } from "@firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
-  getFirestore,
   collection,
   addDoc,
   serverTimestamp,
@@ -20,7 +18,7 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore";
-import { app } from "@/firebase/firebaseApp";
+import { auth, database } from "@/firebase/firebaseApp";
 
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { MdDeleteForever } from "react-icons/md";
@@ -29,11 +27,9 @@ import { format } from "date-fns";
 
 import userData from "@/constants/data";
 
-const database = getFirestore(app);
 const dbInstance = collection(database, "comments");
 
 const provider = new GoogleAuthProvider();
-const auth = getAuth();
 setPersistence(auth, inMemoryPersistence);
 
 const signIn = async () => {

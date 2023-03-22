@@ -2,7 +2,7 @@ import ContainerBlock from "@/components/ContainerBlock";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 
-export default function Home() {
+export default function Home({}) {
   return (
     <ContainerBlock
       title="Yassine Sebri - Hacker, Developer and Instructor"
