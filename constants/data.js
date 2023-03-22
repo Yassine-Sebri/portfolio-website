@@ -38,7 +38,7 @@ const userData = {
   ],
   about: {
     title:
-      "I'm a developer and a hacker who loves learning new things and challenging myself",
+      "I'm a developer and a hacker who loves to learn new things and challenge myself",
     description: [
       `Ever since I laid my hands on my first computer at the age of 9, I've been hooked. It was a basic model, but I spent countless hours tinkering with it, exploring its features, and discovering what it was capable of.`,
       `My passion for coding and development started in my teenage years when I started building simple websites and experimenting with programming languages like HTML, CSS, and JavaScript. It wasn't much, but it paved the way for me to learn more exciting things.`,
