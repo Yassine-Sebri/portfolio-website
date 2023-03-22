@@ -82,7 +82,7 @@ const userData = {
       desc: "Worked closely with the network team to supervise and ensure the availability of their mobile broadband service.",
     },
   ],
-  resumeUrl: "",
+  resumeUrl: "#",
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/yassinesebri",
     github: "https://github.com/Yassine-Sebri",

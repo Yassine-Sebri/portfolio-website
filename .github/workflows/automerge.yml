@@ -3,7 +3,7 @@ on:
   workflow_run:
     workflows: [test]
     branches:
-      - dev/*
+      - dev
     types:
       - completed
 jobs:
@@ -17,5 +17,4 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_LABELS: "auto-pr"
-          MERGE_DELETE_BRANCH: "true"
           MERGE_METHOD: "squash"
