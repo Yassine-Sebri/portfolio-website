@@ -103,7 +103,7 @@ export default function Comments({ instances }) {
               setBody("");
             }}
           >
-            <div className="w-full border border-slate-200 dark:border-slate-800 rounded-xl relative mb-4">
+            <div className="w-full border border-white dark:border-slate-800 rounded-xl relative mb-4">
               <textarea
                 aria-label="Your message"
                 placeholder="Your message..."
@@ -114,7 +114,7 @@ export default function Comments({ instances }) {
               />
             </div>
             <button
-              className="px-4 py-2 font-medium bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded w-28"
+              className="px-4 py-2 font-medium bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded w-28"
               type="submit"
             >
               Write
