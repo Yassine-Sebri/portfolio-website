@@ -7,12 +7,10 @@ import {
   orderBy,
   getDocs,
 } from "firebase/firestore";
-import { initFirebase } from "@/firebase/firebaseApp";
+import { app } from "@/firebase/firebaseApp";
 
 import ContainerBlock from "../components/ContainerBlock";
 import Comments from "../components/Comments";
-
-const app = initFirebase();
 
 export const getServerSideProps = async () => {
   const database = getFirestore(app);
