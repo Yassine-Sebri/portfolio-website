@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }) {
     <ThemeProvider defaultTheme="dark" attribute="class">
       <Component {...pageProps} />
       {loading && <LoadingIcon />}
+      <Analytics />
     </ThemeProvider>
   );
 }
