@@ -20,7 +20,7 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore";
-import { initFirebase } from "@/firebase/firebaseApp";
+import { app } from "@/firebase/firebaseApp";
 
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { MdDeleteForever } from "react-icons/md";
@@ -29,7 +29,6 @@ import { format } from "date-fns";
 
 import userData from "@/constants/data";
 
-const app = initFirebase();
 const database = getFirestore(app);
 const dbInstance = collection(database, "comments");
 
