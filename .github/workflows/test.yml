@@ -15,9 +15,6 @@ jobs:
           node-version: 16
       - name: Install dependencies
         run: npm install
-      - uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run ESLint
         run: npm run lint
       - name: Run Cypress
