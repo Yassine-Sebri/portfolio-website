@@ -2,7 +2,7 @@ const userData = {
   githubUsername: "Yassine-Sebri",
   name: "Yassine Sebri",
   designation: "IT Enthusiast",
-  email: "yassinesebri6@gmail.com",
+  email: "contact@yassinesebri.com",
   phone: "+216 53 307 603",
   address: "Kairouan, Tunisia.",
   projects: [

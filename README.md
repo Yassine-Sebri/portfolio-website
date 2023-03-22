@@ -12,6 +12,5 @@ A simple and minimalistic website written in React and Next.js that uses github 
 - Firebase
 - Git
 - GitHub actions
-- Gitleaks
 - ESLint
 - Cypress
