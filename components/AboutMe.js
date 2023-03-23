@@ -62,9 +62,9 @@ export default function AboutMe() {
                 I am currently looking for a job. If my qualifications pique
                 your interest, please take a moment to review{" "}
                 <a
-                  href={userData.resumeUrl}
-                  target="__blank"
+                  href="/Yassine Sebri.pdf"
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
+                  download
                 >
                   CV
                 </a>
