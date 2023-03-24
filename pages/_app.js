@@ -1,35 +1,35 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+// import { useState, useEffect } from "react";
+// import { useRouter } from "next/router";
 import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "next-themes";
 
 import "@/styles/globals.css";
-import { ThemeProvider } from "next-themes";
-import LoadingIcon from "../components/LoadingIcon";
-import "../styles/loadingIcon.css";
+// import LoadingIcon from "../components/LoadingIcon";
+// import "../styles/loadingIcon.css";
 
 export default function App({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
+  // const [loading, setLoading] = useState(false);
+  // const router = useRouter();
 
-  useEffect(() => {
-    const handleStart = () => setLoading(true);
-    const handleComplete = () => setLoading(false);
+  // useEffect(() => {
+  //   const handleStart = () => setLoading(true);
+  //   const handleComplete = () => setLoading(false);
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleComplete);
-    router.events.on("routeChangeError", handleComplete);
+  //   router.events.on("routeChangeStart", handleStart);
+  //   router.events.on("routeChangeComplete", handleComplete);
+  //   router.events.on("routeChangeError", handleComplete);
 
-    return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleComplete);
-      router.events.off("routeChangeError", handleComplete);
-    };
-  });
+  //   return () => {
+  //     router.events.off("routeChangeStart", handleStart);
+  //     router.events.off("routeChangeComplete", handleComplete);
+  //     router.events.off("routeChangeError", handleComplete);
+  //   };
+  // });
 
   return (
     <ThemeProvider defaultTheme="dark" attribute="class">
       <Component {...pageProps} />
-      {loading && <LoadingIcon />}
+      {/* {loading && <LoadingIcon />} */}
       <Analytics />
     </ThemeProvider>
   );
