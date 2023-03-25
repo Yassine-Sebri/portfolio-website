@@ -6,7 +6,7 @@ import { database } from "@/firebase/firebaseApp";
 import ContainerBlock from "../components/ContainerBlock";
 import Comments from "../components/Comments";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const dbInstance = collection(database, "comments");
 
   const q = query(dbInstance, orderBy("updatedAt", "desc"));
@@ -21,7 +21,7 @@ export const getServerSideProps = async () => {
     };
   });
 
-  return { props: { instances } };
+  return { props: { instances }, revalidate: 10 };
 };
 
 export default function words({ instances }) {
