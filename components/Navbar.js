@@ -109,7 +109,7 @@ export default function Navbar() {
               )}
             </span>
           </Link>
-          {/* <Link
+          <Link
             href="/words"
             className={`text-base  ${
               router.pathname === "/words"
@@ -135,7 +135,7 @@ export default function Navbar() {
                 </svg>
               )}
             </span>
-          </Link> */}
+          </Link>
         </div>
 
         <div className="space-x-4 flex flex-row items-center">
@@ -224,12 +224,12 @@ export default function Navbar() {
         >
           Contact
         </Link>
-        {/* <Link
+        <Link
           href="/words"
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
           Words
-        </Link> */}
+        </Link>
       </div>
     </div>
   );

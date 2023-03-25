@@ -25,8 +25,6 @@ import { MdDeleteForever } from "react-icons/md";
 
 import { format } from "date-fns";
 
-import userData from "@/constants/data";
-
 const dbInstance = collection(database, "comments");
 
 const provider = new GoogleAuthProvider();
@@ -85,6 +83,7 @@ export default function Comments({ instances }) {
                   reader.onloadend = () => {
                     {
                       addDoc(dbInstance, {
+                        UID: user.uid,
                         body: body,
                         name: user.displayName,
                         email: user.email,
@@ -153,21 +152,20 @@ function WordsEntry({ entry, user }) {
           {format(new Date(entry.updatedAt), "d MMM yyyy 'at' h:mm bb")}
         </p>
 
-        {user &&
-          (entry.email === user.email || user.email === userData.email) && (
-            <span>
-              <span className="text-gray-200 dark:text-gray-800">/</span>
-              <button
-                onClick={deleteEntry}
-                className="ml-2 text-sm text-red-600 dark:text-red-400"
-              >
-                <MdDeleteForever
-                  className="text-red-500 h-4 w-4"
-                  style={{ marginBottom: "-3px" }}
-                />
-              </button>
-            </span>
-          )}
+        {user && entry.UID === user.uid && (
+          <span>
+            <span className="text-gray-200 dark:text-gray-800">/</span>
+            <button
+              onClick={deleteEntry}
+              className="ml-2 text-sm text-red-600 dark:text-red-400"
+            >
+              <MdDeleteForever
+                className="text-red-500 h-4 w-4"
+                style={{ marginBottom: "-3px" }}
+              />
+            </button>
+          </span>
+        )}
       </div>
     </div>
   );
