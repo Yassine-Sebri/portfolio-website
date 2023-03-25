@@ -35,7 +35,7 @@ const signIn = async () => {
 };
 
 async function revalidatePage() {
-  await fetch(`/api/revalidate?secret=${process.env.MY_SECRET_TOKEN}`, {
+  await fetch(`/api/revalidate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
